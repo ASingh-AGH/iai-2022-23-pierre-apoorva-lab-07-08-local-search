@@ -94,8 +94,8 @@ class SimulatedAnnealing(SubscribableAlgorithm):
 
     def _reheat(self, from_state: State):
         # TODO:
-        # — restore the initial temperature from config (reheat_ratio * initial_temperature)
-        # — reset cooling schedule (self.cooling_steps)
+        # — restore the initial temperature from config (escape_reheat_ratio * initial_temperature)
+        # — reset cooling schedule (self.cooling_time)
         # — reset self.steps_from_last_state_update
         # return the from state
         pass
