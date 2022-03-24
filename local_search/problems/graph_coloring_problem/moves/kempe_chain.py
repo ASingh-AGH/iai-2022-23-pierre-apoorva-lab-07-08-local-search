@@ -17,9 +17,19 @@ class KempeChainMove(Move[GraphColoringState]):
         self.old_color = self.state.coloring[idx].color
 
     def _kempe_chain(self, coloring: List[Vertex]):
-        # TODO: to the kempe chain thing
-        # tip 1. it's just a BFS search over the graph
-        # tip 2. self.graph[c] are the neighbors of node c
+        # TODO: do the kempe chain thing
+        # - self.idx is index of the node beginning the chain
+        # - self.color is the new color of the node (already set in the `make` method)
+        # - self.old_color is the old color of the node 
+        # - self.graph[c] are the neighbors of the node c
+        # - coloring is the list of vertices (every vertex has index and color)
+        #   your task is to modify this coloring in place
+        #
+        # The color of the node with index self.idx has changed!
+        # Now you have to fix all the possible conflicts in a BFS fashion
+        # by changing colors of nodes (via `coloring`): 
+        # - with self.color to self.old_color 
+        # - with self.old_color to self.color
         pass
 
     def make(self) -> GraphColoringState:
