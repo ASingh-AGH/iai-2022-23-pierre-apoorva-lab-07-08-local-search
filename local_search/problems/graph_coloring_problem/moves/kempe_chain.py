@@ -35,7 +35,7 @@ class KempeChainMove(Move[GraphColoringState]):
         #
         # Remember, the BFS start at `self.idx` and should explore the graph
         # as long as the explored nodes are colored with self.old_color or self.color.
-        pass
+        raise NotImplementedError()
 
     def make(self) -> GraphColoringState:
         '''This method changes color of a single node and starts of the kempe chain'''

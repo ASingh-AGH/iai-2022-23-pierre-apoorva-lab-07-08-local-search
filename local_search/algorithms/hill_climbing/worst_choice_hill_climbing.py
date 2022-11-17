@@ -20,4 +20,4 @@ class WorstChoiceHillClimbing(HillClimbing):
         # - find the worst, but still improving improving state 
         #   [1] one with minimal model.improvement(....) > 0 
         # return it (or the current state if there is no improving state)!
-        pass
+        raise NotImplementedError()

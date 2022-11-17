@@ -23,7 +23,7 @@ class GraphColoringGoal(Goal, ABC):
     def _num_colors(self, state: GraphColoringState) -> int:
         # TODO:
         # return number of distinct colors used in `state.coloring` 
-        pass
+        raise NotImplementedError()
 
     def _bad_edges(self, state: GraphColoringState) -> List[int]:
         # TODO:
@@ -31,7 +31,7 @@ class GraphColoringGoal(Goal, ABC):
         # tip 1. `self.edges` is the list of 'Edge' in the graph
         # tip 2. example usage: `state.coloring[edge.start].color` 
         #        is color of the edge start in the current state
-        pass
+        raise NotImplementedError()
 
     def _color_classes(self, state: GraphColoringState) -> List[int]:
         # TODO:
@@ -40,7 +40,7 @@ class GraphColoringGoal(Goal, ABC):
         #   so the result should be a list of size `self.n_vertices`
         # - the result is a list with values corresponding to sizes of the color classes, e.g.
         #   `result[0] = 5` means that there five nodes in `state` with `color = 0`
-        pass
+        raise NotImplementedError()
 
     def human_readable_objective_for(self, state: GraphColoringState) -> str:
         return f"{self._num_colors(state)} colors"

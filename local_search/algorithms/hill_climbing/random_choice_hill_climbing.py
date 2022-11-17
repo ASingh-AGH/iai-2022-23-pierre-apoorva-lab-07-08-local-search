@@ -22,4 +22,4 @@ class RandomChoiceHillClimbing(HillClimbing):
         # - if the random state is better than the current one, return it
         #   [1] `model.improvement` is your friend
         # - otherwise return the current state
-        pass
+        raise NotImplementedError()
