@@ -51,33 +51,42 @@ class SimulatedAnnealing(SubscribableAlgorithm):
 
     def _find_next_state(self, model: Problem, state: State) -> Union[State, None]:
         # TODO:
-        # — find random neighbour (self._get_random_neighbours + `next` to read a single element)
-        # — if the neighbour is better then mark is as the next state
-        # — otherwise calculate the probability of transition using self._calculate_transition_probability
-        #   * use random.random() to check whether the neighbor should be a new state
-        # — update temperature
+        # — find random neighbour:
+        #   [1] `self._get_random_neighbours` creates a generator of the random neighbors
+        #   [2] use `next` to read a single element from a generator, e.g. `next(generator)`
+        # — if the neighbour is better then mark is as the next state:
+        #   [1] use `model.improvement` to check for improvement
+        # — otherwise calculate the probability of transition using `self._calculate_transition_probability`
+        #   [1] use random.random() to generate a random number from range [0,1];
+        #   [2] compare it to the probability to check if algorithm should go to the new state
+        # — update temperature using `self._update_temperature`
         # — return the new state
         pass
 
     def _calculate_transition_probability(self, model: Problem, old_state: State, new_state: State) -> float:
         # TODO:
         # - calculate probability of transition according to the metropolis function
-        #   p = exp(delta / temperature)
-        #   where: delta is the improvement of the objective function (model has a corresponding method)
-        # - use mpmath to calculate the exponential
+        #   p = exp(delta / temperature) [1]
+        # where: 
+        #   - delta is the improvement of the objective function[2]
+        #
+        # [1] `mpmath.exp` calculates `exp` function
+        # [2] `model.improvement` method
         pass
 
     def _update_temperature(self):
         # TODO:
         # — update self.temperature according to the exponential decrease function:
-        #   T_k = T * a^k
-        #   where 'a' can be found in the config as the cooling_step
-        #   and k is stored as self.cooling_time
+        #   `T_k = T * a^k`
+        #   where: 
+        #       [1] `a` is `self.config.cooling_step`
+        #       [2] `k` is stored as `self.cooling_time`` 
         # - update self.cooling_time
-        # - the temperature can't go below self.config.min_temperature
+        # - make sure, the temperature can't go below `self.config.min_temperature`!
         pass
 
     def escape_local_optimum(self, model: Problem, state: State, best_state: State) -> Union[State, None]:
+        ''' This method chooses one of the three possible methods to escale the local minimum'''
         self._local_optimum_escapes += 1
         if self._local_optimum_escapes > self.config.local_optimum_escapes_max >= 0:
             return None
@@ -94,8 +103,10 @@ class SimulatedAnnealing(SubscribableAlgorithm):
 
     def _reheat(self, from_state: State):
         # TODO:
-        # — restore the initial temperature from config (escape_reheat_ratio * initial_temperature)
-        # — reset cooling schedule (self.cooling_time)
-        # — reset self.steps_from_last_state_update
-        # return the from state
+        # — restore the initial temperature based on config (escape_reheat_ratio * initial_temperature)
+        #   [1] initial temperature is stored in `self.config.initial_temperature`
+        #   [2] you should decrease it a bit (multiply by `self.config.escape_reheat_ratio`)
+        # — reset cooling schedule (`self.cooling_time`)
+        # — reset counter looking for local minima (`self.steps_from_last_state_update`)
+        # - return the `from_state`
         pass

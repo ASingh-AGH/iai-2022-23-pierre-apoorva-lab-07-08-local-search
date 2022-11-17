@@ -1,14 +1,15 @@
-# Lab 2. Introduction to Local Search
+# Lab 4. Introduction to Local Search
 
 ## TODO:
 
-Fill missing code according to the `TODO:` comments in the following files:
-- `local_search/algorithms/hill_climbing/best_choice_hill_climbing.py`
-- `local_search/algorithms/hill_climbing/random_choice_hill_climbing.py`
-- `local_search/algorithms/hill_climbing/worst_choice_hill_climbing.py`
-- `local_search/algorithms/simulated_annealing.py`
-- `local_search/problems/graph_coloring_problem/moves/kempe_chain.py`
-- `local_search/problems/graph_coloring_problem/goals/goal.py`
+Fill missing code according to the `TODO:` comments in the following files (listed in the recommended order):
+
+[] `local_search/algorithms/hill_climbing/random_choice_hill_climbing.py`
+[] `local_search/algorithms/hill_climbing/best_choice_hill_climbing.py`
+[] `local_search/algorithms/hill_climbing/worst_choice_hill_climbing.py`
+[] `local_search/algorithms/simulated_annealing.py`
+[] `local_search/problems/graph_coloring_problem/moves/kempe_chain.py`
+[] `local_search/problems/graph_coloring_problem/goals/goal.py`
 
 ## Grading
 

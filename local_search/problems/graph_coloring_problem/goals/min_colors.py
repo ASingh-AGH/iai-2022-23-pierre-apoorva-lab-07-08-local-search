@@ -4,7 +4,7 @@ from local_search.problems.graph_coloring_problem.state import GraphColoringStat
 
 
 class MinColors(GraphColoringGoal):
-
+    '''Basic goal, just checks how many colors are out there'''
     def objective_for(self, state: GraphColoringState) -> int:
         return self._num_colors(state)
 

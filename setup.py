@@ -1,5 +1,7 @@
 from setuptools import setup
 
+
+
 setup(
     name='Local search',
     version='1.0.0',
@@ -14,5 +16,6 @@ setup(
     entry_points='''
         [console_scripts]
         local_search_solver=local_search.cli.entry_point:entry_point
-    '''
+    ''',
+    py_modules = ['local_search']
 )

@@ -4,7 +4,8 @@ from local_search.problems.graph_coloring_problem.state import GraphColoringStat
 
 
 class MaxClasses(GraphColoringGoal):
-
+    '''This goal checks the color classes and their sizes!'''
+    
     def objective_for(self, state: GraphColoringState) -> int:
         color_classes = self._color_classes(state)
         return sum([cc ** 2 for cc in color_classes])

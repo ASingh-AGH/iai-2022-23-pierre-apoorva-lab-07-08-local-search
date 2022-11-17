@@ -6,7 +6,8 @@ from local_search.problems.graph_coloring_problem.state import GraphColoringStat
 
 
 class MinFeasible(GraphColoringGoal):
-
+    '''The most sophisticated goal, all the local optima are feasible solutions!'''
+    
     def objective_for(self, state: GraphColoringState) -> int:
         bad_edges = self._bad_edges(state)
         color_classes = self._color_classes(state)
