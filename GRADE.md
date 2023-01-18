@@ -1,7 +1,7 @@
 Dear Student,
 
 I regret to inform you that you've received only **0** out of 50 points for this assignment.\
-There still exist some issues that should be addressed before the deadline: 2023-01-21 23:50:00 CET (+0100). For further details, please refer to the following list:
+There still exist some issues that should be addressed before the deadline: 2023-01-24 08:50:00 CET (+0100). For further details, please refer to the following list:
 
 <details><summary>Graph coloring goal should correctly count num colors &gt;&gt; NotImplementedError</summary></details>
 <details><summary>Graph coloring goal should correctly count num colors &gt;&gt; NotImplementedError</summary></details>
@@ -23,7 +23,7 @@ There still exist some issues that should be addressed before the deadline: 2023
 <details><summary>Kempe chain should handle cycles &gt;&gt; NotImplementedError</summary></details>
 <details><summary>Best choice hill climbing should find the best neighbor &gt;&gt; NotImplementedError</summary></details>
 <details><summary>Worst choice hill climbing should find the worst improving neighbor &gt;&gt; NotImplementedError</summary></details>
-<details><summary>Random choice hill climbing should find the random improving neighbor &gt;&gt; NotImplementedError</summary></details>
+<details><summary>Random choice hill climbing should find the random improving neighbor &gt;&gt; &#x27;MockState&#x27; object is not an iterator</summary></details>
 <details><summary>Reheat should restore temp and reset schedule &gt;&gt; NotImplementedError</summary></details>
 <details><summary>Update temperature not goes below min temperature &gt;&gt; NotImplementedError</summary></details>
 <details><summary>Update temperature uses correct decrease function &gt;&gt; NotImplementedError</summary></details>
