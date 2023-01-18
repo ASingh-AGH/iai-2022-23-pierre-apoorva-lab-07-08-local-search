@@ -25,7 +25,7 @@ class BestChoiceHillClimbing(HillClimbing):
         improvement=[state]
 
         for neighbour in self._get_neighbours(model, state):
-            if model.improvement(n2, neighbour) > 0:
+            if model.improvement(neighbour, state) > 0:
                 improvement.append(neighbour)
 
         return max(improvement)
