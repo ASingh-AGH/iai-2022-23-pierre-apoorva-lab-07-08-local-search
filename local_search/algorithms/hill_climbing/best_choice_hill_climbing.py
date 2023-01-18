@@ -21,4 +21,15 @@ class BestChoiceHillClimbing(HillClimbing):
         # - find the worst, but still improving improving state 
         #   [1] one with minimal model.improvement(....) > 0 
         # return it (or the current state if there is no improving state)!
+
+        improvement = []
+        for neighbour in self._get_neighbours(model, state):
+            if model.improvement(neighbour, state) > 0:
+                improvement.append(model.improvement(neighbour, state))
+        
+        improvement.sort()
+        if improvement[-1] > state:
+            return improvement[-1]
+        else: 
+            return state
         raise NotImplementedError()
