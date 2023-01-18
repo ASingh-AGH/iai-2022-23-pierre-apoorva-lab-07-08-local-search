@@ -35,5 +35,8 @@ class WorstChoiceHillClimbing(HillClimbing):
                     improvement[j], improvement[j + 1] = improvement[j + 1], improvement[j]
 
         
-        return improvement[0]
+        if len(improvement) > 1:
+            return improvement[1]
+        else:
+            return state
         raise NotImplementedError()
