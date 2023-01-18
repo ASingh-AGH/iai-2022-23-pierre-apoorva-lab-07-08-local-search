@@ -1,6 +1,6 @@
 Dear Student,
 
-I regret to inform you that you've received only **4** out of 50 points for this assignment.\
+I regret to inform you that you've received only **4** out of 46 points for this assignment.\
 There still exist some issues that should be addressed before the deadline: 2023-01-24 08:50:00 CET (+0100). For further details, please refer to the following list:
 
 <details><summary>Graph coloring goal should correctly count num colors &gt;&gt; NotImplementedError</summary></details>
@@ -21,7 +21,6 @@ There still exist some issues that should be addressed before the deadline: 2023
 <details><summary>Kempe chain should solve direct conflicts &gt;&gt; NotImplementedError</summary></details>
 <details><summary>Kempe chain should solve indirect conflicts &gt;&gt; NotImplementedError</summary></details>
 <details><summary>Kempe chain should handle cycles &gt;&gt; NotImplementedError</summary></details>
-<details><summary>Best choice hill climbing should find the best neighbor &gt;&gt; &#x27;&gt;&#x27; not supported between instances of &#x27;MockState&#x27; and &#x27;MockState&#x27;</summary></details>
 <details><summary>Worst choice hill climbing should find the worst improving neighbor &gt;&gt; NotImplementedError</summary></details>
 <details><summary>Reheat should restore temp and reset schedule &gt;&gt; NotImplementedError</summary></details>
 <details><summary>Update temperature not goes below min temperature &gt;&gt; NotImplementedError</summary></details>
