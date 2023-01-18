@@ -22,4 +22,11 @@ class RandomChoiceHillClimbing(HillClimbing):
         # - if the random state is better than the current one, return it
         #   [1] `model.improvement` is your friend
         # - otherwise return the current state
+
+        for neighbour in self._get_random_neighbours(model, state):
+            n2 = next(neighbour)
+            if model.improvement(n2, neighbour) > 0:
+                return n2
+            else:
+                return state
         raise NotImplementedError()
