@@ -24,12 +24,9 @@ class BestChoiceHillClimbing(HillClimbing):
 
         improvement = []
         for neighbour in self._get_neighbours(model, state):
-            if model.improvement(neighbour, state) > 0:
-                improvement.append(model.improvement(neighbour, state))
+            improvement.append(model.improvement(neighbour, state))
         
         improvement.sort()
-        if improvement[-1] > state:
-            return improvement[-1]
-        else: 
-            return state
+        return improvement[-1]
+
         raise NotImplementedError()
