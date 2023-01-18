@@ -21,7 +21,7 @@ There still exist some issues that should be addressed before the deadline: 2023
 <details><summary>Kempe chain should solve direct conflicts &gt;&gt; NotImplementedError</summary></details>
 <details><summary>Kempe chain should solve indirect conflicts &gt;&gt; NotImplementedError</summary></details>
 <details><summary>Kempe chain should handle cycles &gt;&gt; NotImplementedError</summary></details>
-<details><summary>Worst choice hill climbing should find the worst improving neighbor &gt;&gt; NotImplementedError</summary></details>
+<details><summary>Worst choice hill climbing should find the worst improving neighbor &gt;&gt; algorithm returns a state that&#x27;s not better than the previous one (goal type: GoalType.MIN)</summary></details>
 <details><summary>Reheat should restore temp and reset schedule &gt;&gt; NotImplementedError</summary></details>
 <details><summary>Update temperature not goes below min temperature &gt;&gt; NotImplementedError</summary></details>
 <details><summary>Update temperature uses correct decrease function &gt;&gt; NotImplementedError</summary></details>
