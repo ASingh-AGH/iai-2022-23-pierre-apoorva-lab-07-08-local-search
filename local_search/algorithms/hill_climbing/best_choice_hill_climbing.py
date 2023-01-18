@@ -31,7 +31,7 @@ class BestChoiceHillClimbing(HillClimbing):
         n = len(improvement)
 
         for i in range(n):
-            for j in range(0, n - 1)
+            for j in range(0, n - 1):
                 if model.improvement(improvement[j], improvement[j+1]) > 0:
                     improvement[j], improvement[j + 1] = improvement[j + 1], improvement[j]
 
