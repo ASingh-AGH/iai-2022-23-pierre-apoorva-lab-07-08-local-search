@@ -22,11 +22,15 @@ class BestChoiceHillClimbing(HillClimbing):
         #   [1] one with minimal model.improvement(....) > 0 
         # return it (or the current state if there is no improving state)!
 
-        improvement = []
+        improvement[state]
+
         for neighbour in self._get_neighbours(model, state):
-            improvement.append(model.improvement(neighbour, state))
+            if model.improvement(n2, neighbour) > 0:
+                improvement.append(neighbour)
         
         improvement.sort()
         return improvement[-1]
+        
+     
 
         raise NotImplementedError()
