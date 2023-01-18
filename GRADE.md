@@ -1,6 +1,6 @@
 Dear Student,
 
-I regret to inform you that you've received only **4** out of 46 points for this assignment.\
+I regret to inform you that you've received only **8** out of 50 points for this assignment.\
 There still exist some issues that should be addressed before the deadline: 2023-01-24 08:50:00 CET (+0100). For further details, please refer to the following list:
 
 <details><summary>Graph coloring goal should correctly count num colors &gt;&gt; NotImplementedError</summary></details>
