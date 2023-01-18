@@ -28,8 +28,14 @@ class BestChoiceHillClimbing(HillClimbing):
             if model.improvement(neighbour, state) > 0:
                 improvement.append(neighbour)
 
-        return max(improvement)
+        n = len(improvement)
+
+        for i in range(n):
+            for j in range(0, n - 1)
+                if model.improvement(improvement[j], improvement[j+1]) > 0:
+                    improvement[j], improvement[j + 1] = improvement[j + 1], improvement[j]
+
         
-     
+        return improvement[-1]
 
         raise NotImplementedError()
