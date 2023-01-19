@@ -136,6 +136,7 @@ class SimulatedAnnealing(SubscribableAlgorithm):
         #----------------my code start---------------------------------------
         self.temperature = self.config.initial_temperature * self.config.escape_reheat_ratio
         self.cooling_time = 0
+        self.steps_from_last_state_update = 0
         return from_state
         #----------------end my code---------------------------------------
         raise NotImplementedError()
