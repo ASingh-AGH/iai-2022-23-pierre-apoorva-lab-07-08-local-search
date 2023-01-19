@@ -21,7 +21,6 @@ class GraphColoringGoal(Goal, ABC):
         GraphColoringGoal.goals[camel_to_snake(cls.__name__)] = cls
 
     def _num_colors(self, state: GraphColoringState) -> int:
-        # TODO:
         # return number of distinct colors used in `state.coloring` 
 
         all_col = []
@@ -38,6 +37,8 @@ class GraphColoringGoal(Goal, ABC):
         # tip 1. `self.edges` is the list of 'Edge' in the graph
         # tip 2. example usage: `state.coloring[edge.start].color` 
         #        is color of the edge start in the current state
+
+
         raise NotImplementedError()
 
     def _color_classes(self, state: GraphColoringState) -> List[int]:

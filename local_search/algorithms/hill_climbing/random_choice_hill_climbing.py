@@ -13,7 +13,6 @@ class RandomChoiceHillClimbing(HillClimbing):
     """
 
     def _climb_the_hill(self, model: Problem, state: State) -> Union[State, None]:
-        # TODO:
         # - look first at the `first_choice_hill_climbing.py` and understand it
         # - get single random neighbor:
         #   [1] use `self._get_random_neighbours(model, state)`` instead of `self._get_neighbours(model, state)`;
@@ -22,6 +21,7 @@ class RandomChoiceHillClimbing(HillClimbing):
         # - if the random state is better than the current one, return it
         #   [1] `model.improvement` is your friend
         # - otherwise return the current state
+        
         n = iter(self._get_random_neighbours(model, state))
         for neighbour in n:
             n2 = next(n)

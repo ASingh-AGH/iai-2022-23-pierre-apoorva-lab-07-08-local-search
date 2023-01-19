@@ -13,7 +13,6 @@ class WorstChoiceHillClimbing(HillClimbing):
     """
 
     def _climb_the_hill(self, model: Problem, state: State) -> Union[State, None]:
-        # TODO:
         # - look first at the `first_choice_hill_climbing.py` and understand it
         # - go trough all the neighbors :
         #   [1] `self._get_neighbours` is your friend
