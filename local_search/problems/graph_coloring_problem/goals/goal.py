@@ -23,6 +23,8 @@ class GraphColoringGoal(Goal, ABC):
     def _num_colors(self, state: GraphColoringState) -> int:
         # TODO:
         # return number of distinct colors used in `state.coloring` 
+        return len(state.coloring)
+
         raise NotImplementedError()
 
     def _bad_edges(self, state: GraphColoringState) -> List[int]:
