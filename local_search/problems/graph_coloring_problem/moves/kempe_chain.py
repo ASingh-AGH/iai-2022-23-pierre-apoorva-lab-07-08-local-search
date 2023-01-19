@@ -37,23 +37,31 @@ class KempeChainMove(Move[GraphColoringState]):
         # as long as the explored nodes are colored with self.old_color or self.color.
 
 #-------------------my code from here----------------------
-        queue = [self.idx]
+        queue = []
         visited = set()
-        while queue:
-            current_node = queue.pop(0)
-            if current_node in visited:
-                continue
-            visited.add(current_node)
-            current_node_color = coloring[current_node].color
-            current_node_neighbours = self.graph[current_node]
-            for neighbour in current_node_neighbours:
-                if (coloring[neighbour].color != self.old_color) and (coloring[neighbour].color != self.color):
-                    continue
-                elif coloring[neighbour].color == self.old_color:
-                    coloring[neighbour].color = self.color
-                elif coloring[neighbour].color == self.color:
-                    coloring[neighbour].color = self.old_color
-                queue.append(neighbour)
+        queue.append(self.idx)
+        visited.add(self.idx)
+        while len(queue) > 0:
+            node = queue.pop(0)
+            for c in self.graph[node]:
+                if c not in visited:
+                    if coloring[c].color == self.old_color:
+                        coloring[c].color = self.color
+                    elif coloring[c].color == self.color:
+                        coloring[c].color = self.old_color
+                    visited.add(c)
+                    queue.append(c)
+            # Handle cycles
+            if len(queue) > 0 and node == queue[0]:
+                node = queue.pop(0)
+                for c in self.graph[node]:
+                    if c not in visited:
+                        if coloring[c].color == self.old_color:
+                            coloring[c].color = self.color
+                        elif coloring[c].color == self.color:
+                            coloring[c].color = self.old_color
+                        visited.add(c)
+                        queue.append(c)
 #-------------------code ends here-------------------------
 
 
