@@ -24,7 +24,11 @@ class GraphColoringGoal(Goal, ABC):
         # TODO:
         # return number of distinct colors used in `state.coloring` 
 
-        return len(set(state.coloring))
+        all_col = []
+        for i in state.coloring:
+            all_col.append(i.color)
+
+        return len(set(all_col))
 
         raise NotImplementedError()
 
