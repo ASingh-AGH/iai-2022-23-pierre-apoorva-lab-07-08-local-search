@@ -74,7 +74,7 @@ class SimulatedAnnealing(SubscribableAlgorithm):
             self._update_temperature()
             return None
         #----------------end my code---------------------------------------
-        raise NotImplementedError()
+        #raise NotImplementedError()
 
     def _calculate_transition_probability(self, model: Problem, old_state: State, new_state: State) -> float:
         # TODO:
@@ -90,7 +90,7 @@ class SimulatedAnnealing(SubscribableAlgorithm):
         p = mpmath.exp(delta / self.temperature)
         return p
         #----------------end my code---------------------------------------
-        raise NotImplementedError()
+        #raise NotImplementedError()
 
     def _update_temperature(self):
         # TODO:
@@ -107,7 +107,7 @@ class SimulatedAnnealing(SubscribableAlgorithm):
         if self.temperature < self.config.min_temperature:
             self.temperature = self.config.min_temperature
         #----------------end my code---------------------------------------
-        raise NotImplementedError()
+        #raise NotImplementedError()
 
     def escape_local_optimum(self, model: Problem, state: State, best_state: State) -> Union[State, None]:
         ''' This method chooses one of the three possible methods to escale the local minimum'''
@@ -139,4 +139,4 @@ class SimulatedAnnealing(SubscribableAlgorithm):
         self.steps_from_last_state_update = 0
         return from_state
         #----------------end my code---------------------------------------
-        raise NotImplementedError()
+        #raise NotImplementedError()
