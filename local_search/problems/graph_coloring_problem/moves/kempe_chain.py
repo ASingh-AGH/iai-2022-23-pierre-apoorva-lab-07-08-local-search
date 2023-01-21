@@ -35,7 +35,7 @@ class KempeChainMove(Move[GraphColoringState]):
         #
         # Remember, the BFS start at `self.idx` and should explore the graph
         # as long as the explored nodes are colored with self.old_color or self.color.
-#-------------------my code from here----------------------
+        #-------------------my code from here----------------------
         queue = []
         visited = set()
         queue.append(self.idx)
@@ -60,8 +60,8 @@ class KempeChainMove(Move[GraphColoringState]):
                             coloring[c].color = self.old_color
                         visited.add(c)
                         queue.append(c)
-#-------------------code ends here-------------------------
-        raise NotImplementedError()
+        #-------------------code ends here-------------------------
+        #raise NotImplementedError()
 
     def make(self) -> GraphColoringState:
         '''This method changes color of a single node and starts of the kempe chain'''
