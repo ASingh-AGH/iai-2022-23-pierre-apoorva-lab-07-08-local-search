@@ -104,7 +104,7 @@ class SimulatedAnnealing(SubscribableAlgorithm):
         #----------------my code start---------------------------------------
         self.temperature = self.config.initial_temperature * self.config.cooling_step**self.cooling_time
         self.cooling_time += 1
-        if self.temperature < self.config.min_temperature:
+        if self.temperature <= self.config.min_temperature:
             self.temperature = self.config.min_temperature
         #----------------end my code---------------------------------------
         #raise NotImplementedError()
