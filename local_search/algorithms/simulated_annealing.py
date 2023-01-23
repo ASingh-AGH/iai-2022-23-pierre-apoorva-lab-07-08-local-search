@@ -65,6 +65,7 @@ class SimulatedAnnealing(SubscribableAlgorithm):
         random_neighbours = self._get_random_neighbours(model, state)
         next_state = next(random_neighbours)
         if model.improvement(state, next_state) > 0:
+            self._update_temperature()
             return next_state
         else:
             transition_probability = self._calculate_transition_probability(model, state, next_state)
