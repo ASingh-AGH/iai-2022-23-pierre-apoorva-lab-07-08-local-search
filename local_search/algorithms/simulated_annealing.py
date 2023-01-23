@@ -73,7 +73,6 @@ class SimulatedAnnealing(SubscribableAlgorithm):
                 self._update_temperature()
                 return next_state
             else:
-                self._update_temperature()
                 return state
         #----------------end my code---------------------------------------
         #raise NotImplementedError()
